@@ -1,10 +1,22 @@
 # FEMUP-BIM for Revit
 
-A pyRevit extension that closes the loop between a BIM model and the structural
-assessment of a heritage structure: it imports the mesh of a finite element model into
-Revit, lets you assign sensor channels and boundary conditions by picking nodes in the
-3-D view, runs a Finite Element Model Updating against experimental modal data in
-Abaqus, and brings the calibrated results back into Revit as a drawing sheet.
+Calibrating a finite element model against dynamic measurements usually happens far away
+from the BIM model. Sensor coordinates are copied by hand into a script, the optimisation
+runs in a terminal, and the results end up in a folder of plots that nobody opens twice.
+The model of the building and the assessment of the building live in different worlds.
+
+This extension puts that loop inside Revit. You import the mesh of your FE model as
+parametric families, click the nodes where the accelerometers actually were, declare
+which material properties are uncertain and how far they may move, and start the
+calibration. A Particle Swarm Optimisation then drives Abaqus through as many frequency
+extractions as it needs, pairing numerical and experimental modes by MAC and frequency
+distance. When it finishes, the calibrated parameters, the MAC matrix, the convergence
+history and a view of the model come back as a Revit drawing sheet — stored next to the
+model they describe, in the file the rest of the project already uses.
+
+It was built for heritage structures, where the material properties are genuinely
+unknown and a calibrated model is the only honest basis for an assessment, but nothing
+in it is specific to masonry.
 
 **→ [Read the walkthrough](WALKTHROUGH.md)** for installation and a step-by-step guide.
 
