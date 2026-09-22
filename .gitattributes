@@ -1,0 +1,20 @@
+# Your Git is configured with core.autocrlf=true, which rewrites line endings on
+# commit and checkout. That must never happen to binary files, and there is no
+# reason to let it churn through the large mesh and input files either.
+#
+# Order matters: the LAST matching pattern wins, so the general rule comes first
+# and the specific overrides come after it.
+
+# Default: let Git normalise line endings for ordinary text files.
+*       text=auto
+
+# Large text inputs: keep byte-for-byte as they are.
+*.inp   -text
+*.obj   -text
+
+# Revit families, the Abaqus CAE database and images: binary, never touch.
+*.rfa   binary
+*.rvt   binary
+*.cae   binary
+*.odb   binary
+*.png   binary

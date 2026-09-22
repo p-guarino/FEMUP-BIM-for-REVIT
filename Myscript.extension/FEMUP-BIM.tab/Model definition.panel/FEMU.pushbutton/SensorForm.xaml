@@ -1,0 +1,22 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sensor Position Assignment" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <!-- Directory Selection -->
+            <Button Name="btnBrowseDir" Content="Select Directory" Margin="10" Width="200" HorizontalAlignment="Center" Click="browse_dir"/>
+            
+            <!-- Direction Selection -->
+            <CheckBox Name="chkX" Content="X" Margin="10" HorizontalAlignment="Center"/>
+            <CheckBox Name="chkY" Content="Y" Margin="10" HorizontalAlignment="Center"/>
+            <CheckBox Name="chkZ" Content="Z" Margin="10" HorizontalAlignment="Center"/>
+            
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Name="btnOk" Content="OK" Width="80" Margin="5" Click="ok_clicked"/>
+                <Button Name="btnSaveAll" Content="Save All Sensor Positions" Width="150" Margin="5" Click="save_all"/>
+                <Button Name="btnCancel" Content="Cancel" Width="80" Margin="5" Click="Close"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

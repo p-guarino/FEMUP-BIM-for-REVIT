@@ -1,0 +1,4 @@
+Material, E_min, E_nom, E_max, Dens_min, Dens_nom, Dens_max
+Side wall left, 1470000000, 2100000000, 2520000000, 0, 0, 0
+Stone arches, 1680000000, 2400000000, 2880000000, 0, 0, 0
+Timber block, 133000000, 1900000000, 2280000000, 0, 0, 0
